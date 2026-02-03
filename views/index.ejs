@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>일정등록</title>
+    <script src="/js/check.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 align="center">일정관리 프로그램</h1>
+    </header>
+    <nav>
+        <table border="1" width="100%" align="center">
+            <tr align="center">
+                <td><a href="/">일정등록</a></td>
+                <td><a href="/reservation">미용예약현황</a></td>
+                <td><a href="/vote">투표하기</a></td>
+                <td><a href="/">홈으로</a></td>
+            </tr>
+        </table>
+    </nav>
+    <section>
+        <h2 align="center">일정등록</h2>
+        <form name="frm" action="/" method="post">
+            <table border="1" align="center">
+                <tr>
+                    <td align="center" width="100">일정번호</td>
+                    <td width="400">
+                        <input type="text" name="do_code"> 예: 2024001
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">일정내용</td>
+                    <td>
+                        <input type="text" name="do_content" style="width: 90%;">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">담당자</td>
+                    <td>
+                        <input type="text" name="do_person">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="등록" onclick="return chk();">
+                        <input type="reset" value="다시하기">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+
+</html>

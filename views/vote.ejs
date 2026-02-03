@@ -1,15 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
-    <html>
+<!DOCTYPE html>
+<html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>투표하기</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>투표하기</title>
+    <script src="/js/vote.js"></script>
+</head>
 
-    <body>
+<body>
+    <header>
         <h1 align="center">투표하기</h1>
-        <form name="frm" action="" method="post">
+    </header>
+    <nav>
+        <table border="1" width="100%" align="center">
+            <tr align="center">
+                <td><a href="/">일정등록</a></td>
+                <td><a href="/reservation">미용예약현황</a></td>
+                <td><a href="/vote">투표하기</a></td>
+                <td><a href="/">홈으로</a></td>
+            </tr>
+        </table>
+    </nav>
+    <section>
+        <form name="frm" action="/vote" method="post">
             <table border="1" align="center">
                 <tr>
                     <td align="center" width="100">주민번호</td>
@@ -63,6 +76,7 @@
                 </tr>
             </table>
         </form>
-    </body>
+    </section>
+</body>
 
-    </html>
+</html>
