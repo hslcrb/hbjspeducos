@@ -1,0 +1,31 @@
+<%- include('header') %>
+
+    <section style="padding: 20px;">
+        <h2 align="center">회원매출조회</h2>
+        <table border="1" style="margin: 0 auto; width: 600px; text-align: center;">
+            <tr>
+                <td>회원번호</td>
+                <td>회원성명</td>
+                <td>고객등급</td>
+                <td>매출</td>
+            </tr>
+            <% sales.forEach(s=> { %>
+                <tr>
+                    <td>
+                        <%= s.custno %>
+                    </td>
+                    <td>
+                        <%= s.custname %>
+                    </td>
+                    <td>
+                        <%= s.grade=='A' ? 'VIP' : (s.grade=='B' ? '일반' : '직원' ) %>
+                    </td>
+                    <td>
+                        <%= s.total_price %>
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+    </section>
+
+    <%- include('footer') %>

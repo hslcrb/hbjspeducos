@@ -21,6 +21,8 @@
   "homepage": "https://github.com/hslcrb/hbjspeducos#readme",
   "dependencies": {
     "ejs": "^4.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   }
 }
