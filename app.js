@@ -11,8 +11,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 // 라우트 설정
-// 일정등록 -> index
+// 메인 인덱스 -> 정적 html 서빙
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// 기존 일정관리 앱 -> /app (선택 사항이나 보존을 위해)
+app.get('/app', (req, res) => {
     res.render('index');
 });
 

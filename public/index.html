@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBJSP EDU COS - Hub</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --primary-btn: #238636;
+            --primary-btn-hover: #2ea043;
+            --secondary-btn: #30363d;
+            --secondary-btn-hover: #8b949e;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .button-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 1.5rem;
+            font-size: 1.25rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+            border: none;
+            display: block;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-github {
+            background-color: var(--primary-btn);
+        }
+
+        .btn-github:hover {
+            background-color: var(--primary-btn-hover);
+        }
+
+        .btn-version {
+            background-color: var(--secondary-btn);
+        }
+
+        .btn-version:hover {
+            background-color: #484f58;
+        }
+
+        .btn-back {
+            background-color: #1f6feb;
+        }
+
+        .btn-back:hover {
+            background-color: #388bfd;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HB JSP EDU</h1>
+        <div class="button-grid">
+            <a href="https://github.com/hslcrb/hbjspeducos" class="btn btn-github">GitHub 저장소 바로가기</a>
+            <a href="/public/20251223/index.html" class="btn btn-version" id="version-link">251223 버전 바로가기</a>
+            <a href="https://rheehose.com" class="btn btn-back">개발자 사이트로 돌아가기</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Rhee Hose. All rights reserved.
+    </footer>
+
+    <script>
+        // 내장 JS: 버튼 클릭 시 콘솔 로그 등 간단한 동적 효과 가능
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                console.log('Navigating to:', button.innerText);
+            });
+        });
+
+        // 251223 버전 링크는 정적 파일 경로로 연결
+    </script>
+</body>
+
+</html>
