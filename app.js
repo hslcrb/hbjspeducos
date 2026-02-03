@@ -41,6 +41,10 @@ app.post('/vote', (req, res) => {
 
 // 서버 실행
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
+    });
+}
+
+module.exports = app;
