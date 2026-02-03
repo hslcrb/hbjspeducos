@@ -1,8 +1,8 @@
 <%- include('header') %>
-
+    <script src="/js/member.js"></script>
     <section style="padding: 20px;">
         <h2 align="center">홈쇼핑 회원 등록</h2>
-        <form action="/20251223/join" method="post" name="frm">
+        <form action="/20251223/join" method="post" name="frm" onsubmit="return check()">
             <table border="1" style="margin: 0 auto;">
                 <tr>
                     <td>회원번호(자동발생)</td>
@@ -35,7 +35,7 @@
                 <tr>
                     <td colspan="2" align="center">
                         <button type="submit">등록</button>
-                        <button type="button" onclick="location.href='/20251223/list'">조회</button>
+                        <button type="button" onclick="res()">다시하기</button>
                     </td>
                 </tr>
             </table>

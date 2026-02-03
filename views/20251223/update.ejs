@@ -1,8 +1,9 @@
 <%- include('header') %>
+    <script src="/js/member.js"></script>
 
     <section style="padding: 20px;">
         <h2 align="center">회원정보수정</h2>
-        <form action="/20251223/update" method="post" name="frm">
+        <form action="/20251223/update" method="post" name="frm" onsubmit="return check()">
             <table border="1" style="margin: 0 auto;">
                 <tr>
                     <td>회원번호</td>
@@ -35,7 +36,7 @@
                 <tr>
                     <td colspan="2" align="center">
                         <button type="submit">수정</button>
-                        <button type="button" onclick="location.href='/20251223/list'">조회</button>
+                        <button type="button" onclick="res()">다시하기</button>
                     </td>
                 </tr>
             </table>
